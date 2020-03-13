@@ -3,9 +3,12 @@ const path = require('path');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('<h1>Hello World!</h1>')
-})
+// Body Parser Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+//Restaurants api routes
+app.use('/api/restaurants', require('./routes/api/restaurants'));
 
 const PORT = process.env.PORT || 5000;
 
