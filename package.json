@@ -1,0 +1,29 @@
+{
+  "name": "crudapplication",
+  "version": "1.0.0",
+  "description": "Perform basic Create, Read, Update, Delete operations on database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pellesoderberg/CrudApplication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pellesoderberg/CrudApplication/issues"
+  },
+  "homepage": "https://github.com/pellesoderberg/CrudApplication#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.5",
+    "nodejs": "0.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
