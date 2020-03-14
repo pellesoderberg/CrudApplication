@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const restaurants = require('../../Restaurants');
-const uuid = require('uuid');
+
+// Restaurant Model
+const Restaurant = require('../../models/Restaurant');
 
 // Get all restaurants
-router.get('/', function(req, res) {
-  res.json(restaurants);
+router.get('/', (req, res) => {
+  Restaurant.find().then(restaurants => res.json(restaurants));
 });
 
-// Get specific restaurant
+/* // Get specific restaurant
 router.get('/:id', function(req, res) {
   const found = restaurants.some(
     restaurant => restaurant.id === parseInt(req.params.id)
@@ -88,5 +89,6 @@ router.delete('/:id', (req, res) => {
       .json({ msg: `No restaurant with the id of ${req.params.id}` });
   }
 });
+ */
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const restaurants = [
+/* const restaurants = [
   {
     id: 1,
     name: 'Meatball Restaurant',
@@ -12,3 +12,4 @@ const restaurants = [
 ];
 
 module.exports = restaurants;
+ */
