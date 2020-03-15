@@ -11,7 +11,10 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb://mongo:27017/viaplay', { useNewUrlParser: true })
+  .connect('mongodb://mongo:27017/viaplay', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
