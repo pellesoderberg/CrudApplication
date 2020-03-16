@@ -51,12 +51,14 @@ router.post('/', async (req, res) => {
       opening_hours: req.body.opening_hours,
       phone_number: req.body.phone_number,
       address: req.body.address,
-      location: {
-        lat: req.body.location.lat,
-        lng: req.body.location.lng
-      },
+      location: req.body.location
+        ? {
+            lat: req.body.location.lat,
+            lng: req.body.location.lng
+          }
+        : null,
       icon: req.body.icon,
-      Rating: req.body.Rating,
+      rating: req.body.rating,
       google_maps_url: req.body.google_maps_url,
       website: req.body.website,
       photo: req.body.photo,
