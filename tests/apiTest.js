@@ -3,7 +3,7 @@ var request = require('supertest');
 var app = require('../server').app;
 
 // Check status 200 of get request
-describe('Unit tests', function() {
+describe('Unit test', function() {
   it('Check status 200 of get request', function(done) {
     request(app)
       .get('/api/restaurants')
@@ -19,7 +19,7 @@ describe('Unit tests', function() {
 });
 
 // Check status 200 of post request
-describe('Unit tests', function() {
+describe('Unit test', function() {
   it('Check status 200 of post request', function(done) {
     request(app)
       .post('/api/restaurants')
@@ -39,7 +39,7 @@ describe('Unit tests', function() {
 });
 
 // Check status 200 for delete request
-describe('Unit tests', function() {
+describe('Unit test', function() {
   it('Check status 200 for delete request', function(done) {
     request(app)
       .delete('/api/restaurants/2')
@@ -55,7 +55,7 @@ describe('Unit tests', function() {
 });
 
 // Check status 200 for sorting on rating
-describe('Unit tests', function() {
+describe('Unit test', function() {
   it('Check status 200 for sorting on rating', function(done) {
     request(app)
       .get('/api/restaurants/rating')
